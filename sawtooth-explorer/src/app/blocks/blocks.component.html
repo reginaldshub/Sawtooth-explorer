@@ -1,0 +1,19 @@
+<h3> viewing Blocks</h3>
+
+{{res}}
+
+<div class="table-responsive">
+    <table class="table">
+        <tr>
+          <th>publicKey</th>
+          <th>batchId</th>
+          <th>headerSignature</th>
+        </tr>      
+        <tr *ngFor="let batch of res">
+          <td>{{batch.header.signer_public_key}}</td>
+          <td>{{head}}</td>
+          <td>{{batch.header_signature}}</td>
+        </tr>
+    </table>
+    
+    </div>

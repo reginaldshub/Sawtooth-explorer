@@ -1,0 +1,25 @@
+<h3> viewing Batches</h3>
+
+<!-- {{res}} -->
+<!-- <div *ngFor="let batch of res;let i = index">
+  {{i}} &nbsp;{{batch.header_signature}}
+</div> -->
+
+
+<!-- publicKey
+batchId
+headerSignature -->
+
+<div class="table-responsive">
+<table class="table">
+    <tr>
+      <th width="10px">publicKey</th>
+      <th width="100px">batchId</th>
+    </tr>      
+    <tr *ngFor="let batch of res">
+      <td>{{batch.header.signer_public_key}}</td>
+      <td>{{head}}</td>
+    </tr>
+</table>
+
+</div>

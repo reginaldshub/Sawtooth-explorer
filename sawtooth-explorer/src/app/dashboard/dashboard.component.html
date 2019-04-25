@@ -1,0 +1,19 @@
+<div class="container-fluid">
+
+    <div class="row">
+  
+      <div class="col-md-2">
+          <div class="btn btn-primary btn-lg btn-block" routerLink="/transactions" routerLinkActive="active">Transactions</div>
+          <div class="btn btn-primary btn-lg btn-block" routerLink="/blocks" routerLinkActive="active">Blocks</div>
+          <div class="btn btn-primary btn-lg btn-block" routerLink="/state" routerLinkActive="active">State</div>
+          <div class="btn btn-primary btn-lg btn-block" routerLink="/batches" routerLinkActive="active">Batches</div>
+        </div>
+  
+      <div class="col-md-10">
+        <router-outlet></router-outlet>
+      </div>
+  
+  
+    </div>
+  
+  </div>
