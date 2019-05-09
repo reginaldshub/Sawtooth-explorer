@@ -11,15 +11,19 @@ batchId
 headerSignature -->
 
 <div class="table-responsive">
-<table class="table">
+  <table class="table fixed">
     <tr>
-      <th width="10px">publicKey</th>
-      <th width="100px">batchId</th>
-    </tr>      
-    <tr *ngFor="let batch of res">
-      <td>{{batch.header.signer_public_key}}</td>
-      <td>{{head}}</td>
+      <th width="20%">batchId</th>
+      <th width="20%">publicKey</th>
+      <th width="60%">transactions</th>
     </tr>
-</table>
+    <tr *ngFor="let batch of res">
+      <td data-toggle="tooltip" title="{{head}}">{{head}}</td>
+      <td data-toggle="tooltip" title="{{batch.header.signer_public_key}}">{{batch.header.signer_public_key}}</td>
+      <span *ngFor="let txn of batch.transactions">
+      <td data-toggle="tooltip" title="{{txn.header_signature}}"><a href="http://localhost:8008/transactions/{{txn.header_signature}}">{{txn.header_signature}}</a></td>
+    </span>
+    </tr>
+  </table>
 
 </div>

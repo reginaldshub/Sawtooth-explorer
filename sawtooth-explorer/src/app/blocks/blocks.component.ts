@@ -7,16 +7,16 @@ import { ServiceService } from '../service.service';
   styleUrls: ['./blocks.component.css']
 })
 export class BlocksComponent implements OnInit {
-  res: Object;
+  res: any;
 
   constructor(private service: ServiceService) { }
 
   ngOnInit() {
     this.service.blocks().subscribe((res) => {
       if (res) {
-        this.res = JSON.stringify(res);
+        console.log(res);
+        this.res = res;
       }
     })
   }
-
 }

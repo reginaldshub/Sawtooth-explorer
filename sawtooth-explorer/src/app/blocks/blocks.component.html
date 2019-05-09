@@ -1,6 +1,6 @@
 <h3> viewing Blocks</h3>
 
-{{res}}
+<!-- {{res.data[0].header.block_num}} -->
 
 <div class="table-responsive">
     <table class="table">
@@ -9,9 +9,9 @@
           <th>batchId</th>
           <th>headerSignature</th>
         </tr>      
-        <tr *ngFor="let batch of res">
+        <tr *ngFor="let batch of res.data">
           <td>{{batch.header.signer_public_key}}</td>
-          <td>{{head}}</td>
+          <td>{{res.head}}</td>
           <td>{{batch.header_signature}}</td>
         </tr>
     </table>

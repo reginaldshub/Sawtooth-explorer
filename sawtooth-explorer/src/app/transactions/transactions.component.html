@@ -1,14 +1,18 @@
 <h3> viewing Transactions</h3>
 
 <div class="table-responsive">
-    <table class="table">
+    <table class="table fixed">
         <tr>
-          <th>batcherPublicKey</th>
-          <th>familyName</th>
-          <th>familyVersion</th>
+          <th width="40%">transactionsId</th>
+          <th width="20%">signerPublicKey</th>
+          <th width="20%">batcherPublicKey</th>
+          <th width="10%">familyName</th>
+          <th width="10%">familyVersion</th>
         </tr>      
-        <tr *ngFor="let txn of res">
-          <td>{{txn.header.batcher_public_key}}</td>
+        <tr *ngFor="let txn of res"  >
+            <td data-toggle="tooltip" title="{{txn.header_signature}}"><a href="http://localhost:8008/transactions/{{txn.header_signature}}">{{txn.header_signature}}</a></td>
+            <td data-toggle="tooltip" title="{{txn.header.signer_public_key}}">{{txn.header.signer_public_key}}</td>
+          <td data-toggle="tooltip" title="{{txn.header.batcher_public_key}}">{{txn.header.batcher_public_key}}</td>
           <td>{{txn.header.family_name}}</td>
           <td>{{txn.header.family_version}}</td>
         </tr>

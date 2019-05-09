@@ -14,6 +14,7 @@ export class StateComponent implements OnInit {
   ngOnInit() {
     this.service.state().subscribe((res:any) => {
       if (res) {
+        console.log(res)
         this.res = res.data;
       }
     })
